@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MBU Student Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#10264b}
+button,input{font:inherit}.app{display:flex;min-height:100vh}.sidebar{width:250px;background:#fff;border-right:1px solid #e5eaf2;position:fixed;left:0;top:0;bottom:0;z-index:10}.brand{padding:25px 20px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #eef1f6}.brand-mark{width:45px;height:45px;border-radius:10px;background:#173d7a;color:#fff;display:grid;place-items:center;font-weight:800}.brand h2{font-size:18px;margin:0}.brand small{color:#6e7d95}.student-mini{padding:18px 18px 8px;display:flex;gap:10px;align-items:center}.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dbeafe,#9fb9dd);display:grid;place-items:center;font-weight:700;color:#173d7a}.nav{padding:10px 12px}.nav button{width:100%;border:0;background:transparent;text-align:left;padding:12px 14px;border-radius:9px;color:#31445f;cursor:pointer;margin:2px 0}.nav button:hover,.nav button.active{background:#edf4ff;color:#1458bb}.nav i{font-style:normal;display:inline-block;width:28px}.main{margin-left:250px;width:calc(100% - 250px)}.top{height:72px;background:#fff;border-bottom:1px solid #e7ebf2;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:5}.search{width:330px;border:1px solid #dfe5ee;border-radius:10px;padding:11px 15px}.top-right{display:flex;gap:16px;align-items:center}.notice{margin:22px 32px 0;background:#102b57;color:white;border-radius:12px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}.notice button{border:0;border-radius:8px;padding:9px 15px;color:#183a6d;background:#fff;cursor:pointer}.content{padding:22px 32px 40px}.page{display:none}.page.active{display:block}.profile-card{background:#dff3ff;border-radius:14px;padding:28px;display:flex;gap:28px;align-items:flex-start}.profile-photo{width:150px;height:190px;border-radius:10px;background:linear-gradient(160deg,#d5dde8,#eef3f8);display:grid;place-items:center;font-size:54px;color:#2a568d}.profile-info h1{font-size:28px;margin:3px 0 12px}.profile-info p{margin:9px 0;font-size:17px}.status{background:#dff5df;color:#1f7b36;border-radius:18px;padding:5px 13px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}.card{background:#fff;border:1px solid #e5eaf2;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(16,38,75,.04)}.card h3{margin:0 0 8px}.metric{font-size:28px;font-weight:750}.muted{color:#748198}.bar{height:8px;background:#edf1f6;border-radius:8px;overflow:hidden;margin-top:12px}.bar span{display:block;height:100%;background:#2878db;border-radius:8px}.section-title{display:flex;justify-content:space-between;align-items:center;margin:26px 0 14px}.table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}.table th,.table td{padding:14px 16px;border-bottom:1px solid #edf0f5;text-align:left}.table th{background:#f7f9fc;color:#506078}.pill{display:inline-block;padding:5px 10px;border-radius:14px;background:#eef5ff;color:#2165bd;font-size:12px}.login{position:fixed;inset:0;background:linear-gradient(120deg,#153967,#2d76ce);display:grid;place-items:center;z-index:50}.login-box{width:min(440px,92%);background:#fff;border-radius:18px;padding:34px;box-shadow:0 25px 60px rgba(0,0,0,.2)}.login-logo{display:flex;align-items:center;gap:12px;margin-bottom:26px}.login-logo .brand-mark{background:#3f83e8}.login h1{font-size:29px;margin:8px 0}.login p{color:#70809a}.login label{display:block;font-weight:650;font-size:14px;margin:18px 0 7px}.login input{width:100%;padding:13px;border:1px solid #d9e0eb;border-radius:9px}.login .submit{width:100%;border:0;background:#347bd9;color:white;padding:13px;border-radius:9px;margin-top:20px;cursor:pointer}.demo{margin-top:20px;background:#f2f6fc;border-radius:10px;padding:15px;font-size:14px}.logout{color:#c43b3b!important}@media(max-width:900px){.sidebar{width:210px}.main{margin-left:210px;width:calc(100% - 210px)}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.sidebar{position:relative;width:100%;height:auto}.main{margin-left:0;width:100%}.app{display:block}.top{padding:0 15px}.search{width:170px}.notice,.content{margin-left:0;margin-right:0;padding-left:15px;padding-right:15px}.grid{grid-template-columns:1fr}.profile-card{flex-direction:column}}
+</style>
+</head>
+<body>
+<div id="login" class="login">
+  <div class="login-box">
+    <div class="login-logo"><div class="brand-mark">M</div><div><b>MBU Student Hub</b><div class="muted">Student Portal</div></div></div>
+    <h1>Welcome back</h1><p>Sign in to access your university dashboard.</p>
+    <label>Username</label><input id="user" placeholder="Enter username">
+    <label>Password</label><input id="pass" type="password" placeholder="Enter password">
+    <button class="submit" onclick="login()">Sign in</button>
+    <div class="demo"><b>Demo sign-in</b><br>Username: student<br>Password: mbu123</div>
+  </div>
+</div>
+
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">M</div><div><h2>MBU Student Hub</h2><small>Mohan Babu University</small></div></div>
+  <div class="student-mini"><div class="avatar">US</div><div><b>Lakkasani Ushasree</b><div class="muted">VII-Semester</div></div></div>
+  <nav class="nav">
+    <button class="active" onclick="showPage('dashboard',this)"><i>⌂</i> My Learning</button>
+    <button onclick="showPage('institution',this)"><i>🏛</i> My Institution</button>
+    <button onclick="showPage('messages',this)"><i>💬</i> Messages</button>
+    <button onclick="showPage('attendance',this)"><i>▣</i> Attendance</button>
+    <button onclick="showPage('assignments',this)"><i>☷</i> Assignments</button>
+    <button onclick="showPage('exams',this)"><i>▦</i> Exam Schedules</button>
+    <button onclick="showPage('reports',this)"><i>▥</i> Reports</button>
+    <button onclick="showPage('assessments',this)"><i>◈</i> Assessments</button>
+    <button onclick="showPage('holidays',this)"><i>☀</i> Holidays</button>
+    <button onclick="showPage('timetable',this)"><i>▦</i> Timetable</button>
+    <button class="logout" onclick="logout()"><i>↪</i> Sign out</button>
+  </nav>
+</aside>
+
+<main class="main">
+<header class="top"><input class="search" placeholder="Search  (Ctrl + K)"><div class="top-right">🔔 <span>Welcome, <b>Ushasree</b></span></div></header>
+<div class="notice"><div>📢 <b>Academic Notice:</b> Students should carry a laptop for regular academic studies and LMS access.</div><button onclick="this.parentElement.remove()">Dismiss</button></div>
+
+<section id="dashboard" class="page active content">
+  <div class="profile-card">
+    <div class="profile-photo">US</div>
+    <div class="profile-info">
+      <h1>LAKKASANI USHASREE</h1>
+      <p>Student <span class="status">Active</span></p>
+      <p>Admission No. : MBU20234457</p><p>Admission Year : 2023–2024</p><p>Roll No. : 23102A010206</p>
+      <p>School : School of Computing</p><p>Department : Artificial Intelligence and Machine Learning</p>
+      <p>Semester : VII-Semester</p><p>Course : B.Tech. – Computer Science and Engineering (AI & ML)</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Attendance</h3><div class="metric">86%</div><div class="bar"><span style="width:86%"></span></div><p class="muted">Overall attendance</p></div>
+    <div class="card"><h3>Assignments</h3><div class="metric">08</div><p class="muted">3 pending · 5 completed</p></div>
+    <div class="card"><h3>Upcoming Exams</h3><div class="metric">03</div><p class="muted">Next: Data Mining</p></div>
+    <div class="card"><h3>CGPA</h3><div class="metric">8.70</div><p class="muted">Current academic record</p></div>
+  </div>
+  <div class="section-title"><h2>Academic Overview</h2><span class="muted">2026–2027</span></div>
+  <div class="grid">
+    <div class="card"><h3>Next Class</h3><p><b>Machine Learning</b></p><p class="muted">10:00 AM · Block A · Room 204</p></div>
+    <div class="card"><h3>Latest Result</h3><p><b>Semester VI</b></p><p class="muted">View detailed marks & grades</p></div>
+    <div class="card"><h3>Fees</h3><p><b>₹12,500 pending</b></p><p class="muted">Due date: 30 Oct 2026</p></div>
+    <div class="card"><h3>Announcements</h3><p><b>3 new updates</b></p><p class="muted">Tap to view notices</p></div>
+  </div>
+</section>
+
+<section id="institution" class="page content"><h1>My Institution</h1><div class="card"><h2>Mohan Babu University</h2><p>School of Computing · Artificial Intelligence and Machine Learning</p><p class="muted">Academic Year 2026–2027 · VII Semester</p></div></section>
+<section id="messages" class="page content"><h1>Messages</h1><table class="table"><tr><th>From</th><th>Subject</th><th>Date</th></tr><tr><td>Department Office</td><td>VII Semester academic update</td><td>21 Oct 2026</td></tr><tr><td>Class Coordinator</td><td>Exam preparation notice</td><td>20 Oct 2026</td></tr></table></section>
+<section id="attendance" class="page content"><h1>Attendance</h1><div class="grid"><div class="card"><h3>Overall</h3><div class="metric">86%</div></div><div class="card"><h3>Present</h3><div class="metric">142</div></div><div class="card"><h3>Absent</h3><div class="metric">23</div></div><div class="card"><h3>Required</h3><div class="metric">75%</div></div></div><div class="section-title"><h2>Subject-wise Attendance</h2></div><table class="table"><tr><th>Subject</th><th>Attendance</th><th>Status</th></tr><tr><td>Machine Learning</td><td>91%</td><td><span class="pill">Good</span></td></tr><tr><td>Cloud Computing</td><td>84%</td><td><span class="pill">Good</span></td></tr><tr><td>Computer Vision</td><td>78%</td><td><span class="pill">Good</span></td></tr><tr><td>Data Mining</td><td>72%</td><td><span class="pill">Watch</span></td></tr></table></section>
+<section id="assignments" class="page content"><h1>Assignments</h1><table class="table"><tr><th>Subject</th><th>Assignment</th><th>Due Date</th><th>Status</th></tr><tr><td>ML</td><td>Classification Models</td><td>24 Oct</td><td><span class="pill">Pending</span></td></tr><tr><td>Cloud</td><td>Virtualization Report</td><td>27 Oct</td><td><span class="pill">Pending</span></td></tr><tr><td>CV</td><td>Defect Detection Review</td><td>18 Oct</td><td><span class="pill">Submitted</span></td></tr></table></section>
+<section id="exams" class="page content"><h1>Exam Schedules</h1><table class="table"><tr><th>Date</th><th>Subject</th><th>Time</th><th>Venue</th></tr><tr><td>28 Oct 2026</td><td>Data Mining</td><td>10:00 AM</td><td>Block A-204</td></tr><tr><td>30 Oct 2026</td><td>Cloud Computing</td><td>10:00 AM</td><td>Block B-102</td></tr><tr><td>03 Nov 2026</td><td>Computer Vision</td><td>10:00 AM</td><td>Block A-206</td></tr></table></section>
+<section id="reports" class="page content"><h1>Reports</h1><div class="grid"><div class="card"><h3>Academic Report</h3><p>Attendance, grades and semester performance.</p><button class="pill">View Report</button></div><div class="card"><h3>Fee Report</h3><p>Current dues and payment history.</p><button class="pill">View Report</button></div></div></section>
+<section id="assessments" class="page content"><h1>Assessments</h1><table class="table"><tr><th>Assessment</th><th>Subject</th><th>Score</th><th>Result</th></tr><tr><td>Internal Test 1</td><td>ML</td><td>42/50</td><td>Excellent</td></tr><tr><td>Internal Test 2</td><td>Cloud</td><td>39/50</td><td>Good</td></tr></table></section>
+<section id="holidays" class="page content"><h1>Holidays</h1><div class="grid"><div class="card"><h3>Diwali</h3><p>20 Oct 2026</p></div><div class="card"><h3>University Holiday</h3><p>25 Oct 2026</p></div><div class="card"><h3>Festival Break</h3><p>09 Nov 2026</p></div></div></section>
+<section id="timetable" class="page content"><h1>Timetable</h1><table class="table"><tr><th>Day</th><th>10:00–11:00</th><th>11:00–12:00</th><th>2:00–3:00</th><th>3:00–4:00</th></tr><tr><td>Monday</td><td>ML</td><td>Cloud</td><td>CV Lab</td><td>Library</td></tr><tr><td>Tuesday</td><td>Data Mining</td><td>ML</td><td>Project</td><td>Project</td></tr><tr><td>Wednesday</td><td>Cloud</td><td>CV</td><td>ML Lab</td><td>Seminar</td></tr><tr><td>Thursday</td><td>Data Mining</td><td>Cloud</td><td>Project</td><td>Project</td></tr><tr><td>Friday</td><td>CV</td><td>ML</td><td>Library</td><td>Club Activity</td></tr></table></section>
+</main></div>
+<script>
+function login(){
+ const u=document.getElementById('user').value.trim(),p=document.getElementById('pass').value;
+ if((u==='student'||u==='ushasree')&&(p==='mbu123'||p==='campus123')){document.getElementById('login').style.display='none';}
+ else alert('For demo use: student / mbu123');
+}
+function logout(){document.getElementById('login').style.display='grid';}
+function showPage(id,btn){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
+ btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
