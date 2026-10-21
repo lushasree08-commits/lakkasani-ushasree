@@ -1,99 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>MBU Student Hub</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#10264b}
-button,input{font:inherit}.app{display:flex;min-height:100vh}.sidebar{width:250px;background:#fff;border-right:1px solid #e5eaf2;position:fixed;left:0;top:0;bottom:0;z-index:10}.brand{padding:25px 20px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #eef1f6}.brand-mark{width:45px;height:45px;border-radius:10px;background:#173d7a;color:#fff;display:grid;place-items:center;font-weight:800}.brand h2{font-size:18px;margin:0}.brand small{color:#6e7d95}.student-mini{padding:18px 18px 8px;display:flex;gap:10px;align-items:center}.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dbeafe,#9fb9dd);display:grid;place-items:center;font-weight:700;color:#173d7a}.nav{padding:10px 12px}.nav button{width:100%;border:0;background:transparent;text-align:left;padding:12px 14px;border-radius:9px;color:#31445f;cursor:pointer;margin:2px 0}.nav button:hover,.nav button.active{background:#edf4ff;color:#1458bb}.nav i{font-style:normal;display:inline-block;width:28px}.main{margin-left:250px;width:calc(100% - 250px)}.top{height:72px;background:#fff;border-bottom:1px solid #e7ebf2;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:5}.search{width:330px;border:1px solid #dfe5ee;border-radius:10px;padding:11px 15px}.top-right{display:flex;gap:16px;align-items:center}.notice{margin:22px 32px 0;background:#102b57;color:white;border-radius:12px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}.notice button{border:0;border-radius:8px;padding:9px 15px;color:#183a6d;background:#fff;cursor:pointer}.content{padding:22px 32px 40px}.page{display:none}.page.active{display:block}.profile-card{background:#dff3ff;border-radius:14px;padding:28px;display:flex;gap:28px;align-items:flex-start}.profile-photo{width:150px;height:190px;border-radius:10px;background:linear-gradient(160deg,#d5dde8,#eef3f8);display:grid;place-items:center;font-size:54px;color:#2a568d}.profile-info h1{font-size:28px;margin:3px 0 12px}.profile-info p{margin:9px 0;font-size:17px}.status{background:#dff5df;color:#1f7b36;border-radius:18px;padding:5px 13px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}.card{background:#fff;border:1px solid #e5eaf2;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(16,38,75,.04)}.card h3{margin:0 0 8px}.metric{font-size:28px;font-weight:750}.muted{color:#748198}.bar{height:8px;background:#edf1f6;border-radius:8px;overflow:hidden;margin-top:12px}.bar span{display:block;height:100%;background:#2878db;border-radius:8px}.section-title{display:flex;justify-content:space-between;align-items:center;margin:26px 0 14px}.table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}.table th,.table td{padding:14px 16px;border-bottom:1px solid #edf0f5;text-align:left}.table th{background:#f7f9fc;color:#506078}.pill{display:inline-block;padding:5px 10px;border-radius:14px;background:#eef5ff;color:#2165bd;font-size:12px}.login{position:fixed;inset:0;background:linear-gradient(120deg,#153967,#2d76ce);display:grid;place-items:center;z-index:50}.login-box{width:min(440px,92%);background:#fff;border-radius:18px;padding:34px;box-shadow:0 25px 60px rgba(0,0,0,.2)}.login-logo{display:flex;align-items:center;gap:12px;margin-bottom:26px}.login-logo .brand-mark{background:#3f83e8}.login h1{font-size:29px;margin:8px 0}.login p{color:#70809a}.login label{display:block;font-weight:650;font-size:14px;margin:18px 0 7px}.login input{width:100%;padding:13px;border:1px solid #d9e0eb;border-radius:9px}.login .submit{width:100%;border:0;background:#347bd9;color:white;padding:13px;border-radius:9px;margin-top:20px;cursor:pointer}.demo{margin-top:20px;background:#f2f6fc;border-radius:10px;padding:15px;font-size:14px}.logout{color:#c43b3b!important}@media(max-width:900px){.sidebar{width:210px}.main{margin-left:210px;width:calc(100% - 210px)}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.sidebar{position:relative;width:100%;height:auto}.main{margin-left:0;width:100%}.app{display:block}.top{padding:0 15px}.search{width:170px}.notice,.content{margin-left:0;margin-right:0;padding-left:15px;padding-right:15px}.grid{grid-template-columns:1fr}.profile-card{flex-direction:column}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Portfolio of Lakkasani Ushasree — Network Engineer with CCNA training and hands-on Cisco networking project experience.">
+  <title>Lakkasani Ushasree | Network Engineer Portfolio</title>
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: #101c2e;
+      --panel-2: #13233a;
+      --text: #edf4ff;
+      --muted: #a8b8ce;
+      --accent: #55d6be;
+      --accent-2: #75a7ff;
+      --line: rgba(177, 203, 232, .16);
+      --shadow: 0 18px 55px rgba(0,0,0,.25);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 85% 5%, rgba(62, 110, 180, .16), transparent 28rem), var(--bg);
+      color: var(--text); line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px);
+      background: rgba(8,17,31,.82); border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.15rem; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; align-items: center; color: var(--muted); font-size: .92rem; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-btn { display: none; border: 1px solid var(--line); background: var(--panel); color: var(--text); padding: 8px 12px; border-radius: 10px; }
+    .hero { padding: 92px 0 78px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 55px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); font-size: .82rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(85,214,190,.12); }
+    h1 { font-size: clamp(2.7rem, 6vw, 5.2rem); line-height: 1.04; letter-spacing: -.065em; margin: 20px 0; }
+    h1 .highlight { color: var(--accent); }
+    .hero p { max-width: 660px; color: var(--muted); font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 18px; border-radius: 12px; font-weight: 750; border: 1px solid var(--line); transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #06201d; border-color: transparent; }
+    .btn-secondary { background: rgba(255,255,255,.035); }
+    .hero-card { position: relative; background: linear-gradient(145deg, rgba(19,35,58,.95), rgba(13,24,41,.92)); border: 1px solid var(--line); border-radius: 26px; padding: 28px; box-shadow: var(--shadow); overflow: hidden; }
+    .hero-card:before { content: ""; position: absolute; width: 210px; height: 210px; border-radius: 50%; background: rgba(85,214,190,.12); filter: blur(20px); top: -100px; right: -80px; }
+    .terminal-top { display: flex; gap: 7px; margin-bottom: 25px; }
+    .terminal-top i { width: 9px; height: 9px; border-radius: 50%; background: #ff7777; }
+    .terminal-top i:nth-child(2) { background: #f8c66b; } .terminal-top i:nth-child(3) { background: var(--accent); }
+    .terminal-label { color: var(--muted); font-size: .8rem; margin-bottom: 8px; }
+    .terminal-line { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .terminal-line b { color: var(--accent); font-weight: 500; }
+    .terminal-line span { color: var(--accent-2); }
+    .mini-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+    .stat { background: rgba(255,255,255,.035); border: 1px solid var(--line); padding: 14px; border-radius: 14px; }
+    .stat strong { display: block; font-size: 1.3rem; } .stat small { color: var(--muted); }
+    section { padding: 70px 0; }
+    .section-heading { margin-bottom: 30px; }
+    .section-heading .kicker { color: var(--accent); text-transform: uppercase; font-size: .78rem; letter-spacing: .16em; font-weight: 800; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.15; letter-spacing: -.045em; margin: 8px 0 12px; }
+    .section-heading p { color: var(--muted); max-width: 700px; margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { background: rgba(16,28,46,.86); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .card h3 { margin: 0 0 10px; font-size: 1.15rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .tag { color: #cfe1f7; background: rgba(117,167,255,.09); border: 1px solid rgba(117,167,255,.19); padding: 6px 10px; border-radius: 999px; font-size: .82rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .skill-card { background: var(--panel); border: 1px solid var(--line); border-radius: 17px; padding: 20px; }
+    .skill-icon { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: var(--accent); background: rgba(85,214,190,.1); font-size: 1.2rem; margin-bottom: 12px; }
+    .skill-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
+    .project { background: linear-gradient(145deg, rgba(19,35,58,.92), rgba(12,23,39,.94)); border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; }
+    .project-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; }
+    .project-number { color: var(--accent); font: 800 .85rem ui-monospace, monospace; }
+    .project h3 { font-size: 1.2rem; line-height: 1.35; margin: 8px 0 10px; }
+    .project p { color: var(--muted); font-size: .94rem; margin: 0; }
+    .project .tag-list { margin-top: 18px; }
+    .timeline { border-left: 1px solid rgba(85,214,190,.4); margin-left: 7px; padding-left: 25px; }
+    .timeline-item { position: relative; padding-bottom: 25px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item:before { content: ""; position: absolute; left: -31px; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(85,214,190,.1); }
+    .timeline-item h3 { margin: 0; } .timeline-item .meta { color: var(--accent); font-size: .88rem; margin: 3px 0 7px; }
+    .timeline-item p { color: var(--muted); margin: 0; }
+    .contact-panel { display: grid; grid-template-columns: 1fr auto; gap: 25px; align-items: center; padding: 32px; border: 1px solid rgba(85,214,190,.28); border-radius: 24px; background: linear-gradient(120deg, rgba(85,214,190,.09), rgba(117,167,255,.07)); }
+    .contact-panel p { color: var(--muted); margin: 8px 0 0; }
+    .contact-links { display: flex; flex-direction: column; gap: 10px; }
+    .contact-links a { color: var(--accent); font-weight: 700; overflow-wrap: anywhere; }
+    footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; padding-top: 65px; gap: 30px; }
+      .hero-card { max-width: 620px; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-links { align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 71px; left: 0; right: 0; background: #0b1627; border-bottom: 1px solid var(--line); padding: 18px 24px; flex-direction: column; align-items: flex-start; gap: 15px; }
+      .nav-links.open { display: flex; }
+      .hero { padding: 55px 0; }
+      section { padding: 52px 0; }
+      .about-grid, .project-grid, .skills-grid { grid-template-columns: 1fr; }
+      .hero-card, .card, .project { padding: 20px; }
+      h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
+      .contact-panel { padding: 24px; }
+    }
+    @media print {
+      header, .actions, footer { display: none; }
+      body { background: white; color: #111; }
+      .hero, section { padding: 25px 0; }
+      .card, .project, .skill-card, .hero-card { background: white; color: #111; border: 1px solid #ddd; box-shadow: none; break-inside: avoid; }
+      .hero p, .card p, .project p, .skill-card p, .section-heading p, .timeline-item p { color: #444; }
+    }
+  </style>
 </head>
 <body>
-<div id="login" class="login">
-  <div class="login-box">
-    <div class="login-logo"><div class="brand-mark">M</div><div><b>MBU Student Hub</b><div class="muted">Student Portal</div></div></div>
-    <h1>Welcome back</h1><p>Sign in to access your university dashboard.</p>
-    <label>Username</label><input id="user" placeholder="Enter username">
-    <label>Password</label><input id="pass" type="password" placeholder="Enter password">
-    <button class="submit" onclick="login()">Sign in</button>
-    <div class="demo"><b>Demo sign-in</b><br>Username: student<br>Password: mbu123</div>
-  </div>
-</div>
-
-<div class="app">
-<aside class="sidebar">
-  <div class="brand"><div class="brand-mark">M</div><div><h2>MBU Student Hub</h2><small>Mohan Babu University</small></div></div>
-  <div class="student-mini"><div class="avatar">US</div><div><b>Lakkasani Ushasree</b><div class="muted">VII-Semester</div></div></div>
-  <nav class="nav">
-    <button class="active" onclick="showPage('dashboard',this)"><i>⌂</i> My Learning</button>
-    <button onclick="showPage('institution',this)"><i>🏛</i> My Institution</button>
-    <button onclick="showPage('messages',this)"><i>💬</i> Messages</button>
-    <button onclick="showPage('attendance',this)"><i>▣</i> Attendance</button>
-    <button onclick="showPage('assignments',this)"><i>☷</i> Assignments</button>
-    <button onclick="showPage('exams',this)"><i>▦</i> Exam Schedules</button>
-    <button onclick="showPage('reports',this)"><i>▥</i> Reports</button>
-    <button onclick="showPage('assessments',this)"><i>◈</i> Assessments</button>
-    <button onclick="showPage('holidays',this)"><i>☀</i> Holidays</button>
-    <button onclick="showPage('timetable',this)"><i>▦</i> Timetable</button>
-    <button class="logout" onclick="logout()"><i>↪</i> Sign out</button>
-  </nav>
-</aside>
-
-<main class="main">
-<header class="top"><input class="search" placeholder="Search  (Ctrl + K)"><div class="top-right">🔔 <span>Welcome, <b>Ushasree</b></span></div></header>
-<div class="notice"><div>📢 <b>Academic Notice:</b> Students should carry a laptop for regular academic studies and LMS access.</div><button onclick="this.parentElement.remove()">Dismiss</button></div>
-
-<section id="dashboard" class="page active content">
-  <div class="profile-card">
-    <div class="profile-photo">US</div>
-    <div class="profile-info">
-      <h1>LAKKASANI USHASREE</h1>
-      <p>Student <span class="status">Active</span></p>
-      <p>Admission No. : MBU20234457</p><p>Admission Year : 2023–2024</p><p>Roll No. : 23102A010206</p>
-      <p>School : School of Computing</p><p>Department : Artificial Intelligence and Machine Learning</p>
-      <p>Semester : VII-Semester</p><p>Course : B.Tech. – Computer Science and Engineering (AI & ML)</p>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">LU<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">Menu ☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>Attendance</h3><div class="metric">86%</div><div class="bar"><span style="width:86%"></span></div><p class="muted">Overall attendance</p></div>
-    <div class="card"><h3>Assignments</h3><div class="metric">08</div><p class="muted">3 pending · 5 completed</p></div>
-    <div class="card"><h3>Upcoming Exams</h3><div class="metric">03</div><p class="muted">Next: Data Mining</p></div>
-    <div class="card"><h3>CGPA</h3><div class="metric">8.70</div><p class="muted">Current academic record</p></div>
-  </div>
-  <div class="section-title"><h2>Academic Overview</h2><span class="muted">2026–2027</span></div>
-  <div class="grid">
-    <div class="card"><h3>Next Class</h3><p><b>Machine Learning</b></p><p class="muted">10:00 AM · Block A · Room 204</p></div>
-    <div class="card"><h3>Latest Result</h3><p><b>Semester VI</b></p><p class="muted">View detailed marks & grades</p></div>
-    <div class="card"><h3>Fees</h3><p><b>₹12,500 pending</b></p><p class="muted">Due date: 30 Oct 2026</p></div>
-    <div class="card"><h3>Announcements</h3><p><b>3 new updates</b></p><p class="muted">Tap to view notices</p></div>
-  </div>
-</section>
+  </header>
 
-<section id="institution" class="page content"><h1>My Institution</h1><div class="card"><h2>Mohan Babu University</h2><p>School of Computing · Artificial Intelligence and Machine Learning</p><p class="muted">Academic Year 2026–2027 · VII Semester</p></div></section>
-<section id="messages" class="page content"><h1>Messages</h1><table class="table"><tr><th>From</th><th>Subject</th><th>Date</th></tr><tr><td>Department Office</td><td>VII Semester academic update</td><td>21 Oct 2026</td></tr><tr><td>Class Coordinator</td><td>Exam preparation notice</td><td>20 Oct 2026</td></tr></table></section>
-<section id="attendance" class="page content"><h1>Attendance</h1><div class="grid"><div class="card"><h3>Overall</h3><div class="metric">86%</div></div><div class="card"><h3>Present</h3><div class="metric">142</div></div><div class="card"><h3>Absent</h3><div class="metric">23</div></div><div class="card"><h3>Required</h3><div class="metric">75%</div></div></div><div class="section-title"><h2>Subject-wise Attendance</h2></div><table class="table"><tr><th>Subject</th><th>Attendance</th><th>Status</th></tr><tr><td>Machine Learning</td><td>91%</td><td><span class="pill">Good</span></td></tr><tr><td>Cloud Computing</td><td>84%</td><td><span class="pill">Good</span></td></tr><tr><td>Computer Vision</td><td>78%</td><td><span class="pill">Good</span></td></tr><tr><td>Data Mining</td><td>72%</td><td><span class="pill">Watch</span></td></tr></table></section>
-<section id="assignments" class="page content"><h1>Assignments</h1><table class="table"><tr><th>Subject</th><th>Assignment</th><th>Due Date</th><th>Status</th></tr><tr><td>ML</td><td>Classification Models</td><td>24 Oct</td><td><span class="pill">Pending</span></td></tr><tr><td>Cloud</td><td>Virtualization Report</td><td>27 Oct</td><td><span class="pill">Pending</span></td></tr><tr><td>CV</td><td>Defect Detection Review</td><td>18 Oct</td><td><span class="pill">Submitted</span></td></tr></table></section>
-<section id="exams" class="page content"><h1>Exam Schedules</h1><table class="table"><tr><th>Date</th><th>Subject</th><th>Time</th><th>Venue</th></tr><tr><td>28 Oct 2026</td><td>Data Mining</td><td>10:00 AM</td><td>Block A-204</td></tr><tr><td>30 Oct 2026</td><td>Cloud Computing</td><td>10:00 AM</td><td>Block B-102</td></tr><tr><td>03 Nov 2026</td><td>Computer Vision</td><td>10:00 AM</td><td>Block A-206</td></tr></table></section>
-<section id="reports" class="page content"><h1>Reports</h1><div class="grid"><div class="card"><h3>Academic Report</h3><p>Attendance, grades and semester performance.</p><button class="pill">View Report</button></div><div class="card"><h3>Fee Report</h3><p>Current dues and payment history.</p><button class="pill">View Report</button></div></div></section>
-<section id="assessments" class="page content"><h1>Assessments</h1><table class="table"><tr><th>Assessment</th><th>Subject</th><th>Score</th><th>Result</th></tr><tr><td>Internal Test 1</td><td>ML</td><td>42/50</td><td>Excellent</td></tr><tr><td>Internal Test 2</td><td>Cloud</td><td>39/50</td><td>Good</td></tr></table></section>
-<section id="holidays" class="page content"><h1>Holidays</h1><div class="grid"><div class="card"><h3>Diwali</h3><p>20 Oct 2026</p></div><div class="card"><h3>University Holiday</h3><p>25 Oct 2026</p></div><div class="card"><h3>Festival Break</h3><p>09 Nov 2026</p></div></div></section>
-<section id="timetable" class="page content"><h1>Timetable</h1><table class="table"><tr><th>Day</th><th>10:00–11:00</th><th>11:00–12:00</th><th>2:00–3:00</th><th>3:00–4:00</th></tr><tr><td>Monday</td><td>ML</td><td>Cloud</td><td>CV Lab</td><td>Library</td></tr><tr><td>Tuesday</td><td>Data Mining</td><td>ML</td><td>Project</td><td>Project</td></tr><tr><td>Wednesday</td><td>Cloud</td><td>CV</td><td>ML Lab</td><td>Seminar</td></tr><tr><td>Thursday</td><td>Data Mining</td><td>Cloud</td><td>Project</td><td>Project</td></tr><tr><td>Friday</td><td>CV</td><td>ML</td><td>Library</td><td>Club Activity</td></tr></table></section>
-</main></div>
-<script>
-function login(){
- const u=document.getElementById('user').value.trim(),p=document.getElementById('pass').value;
- if((u==='student'||u==='ushasree')&&(p==='mbu123'||p==='campus123')){document.getElementById('login').style.display='none';}
- else alert('For demo use: student / mbu123');
-}
-function logout(){document.getElementById('login').style.display='grid';}
-function showPage(id,btn){
- document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
- document.getElementById(id).classList.add('active');
- document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
- btn.classList.add('active');
- window.scrollTo({top:0,behavior:'smooth'});
-}
-</script>
+  <main>
+    <section class="container hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Network Engineer · CCNA Trained</div>
+        <h1>Building reliable<br>networks with <span class="highlight">purpose.</span></h1>
+        <p>I’m <strong>Lakkasani Ushasree</strong>, a B.Tech student in Artificial Intelligence and Machine Learning with hands-on networking experience in Cisco routing, switching, enterprise network design, and troubleshooting.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">Explore my projects ↗</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          <button class="btn btn-secondary" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Networking terminal illustration">
+        <div class="terminal-top"><i></i><i></i><i></i></div>
+        <div class="terminal-label">network-status / overview</div>
+        <div class="terminal-line"><b>ushasree@network</b>:~$ show ip route</div>
+        <div class="terminal-line"><span>✓</span> Routing &amp; Switching</div>
+        <div class="terminal-line"><span>✓</span> VLANs · STP · Inter-VLAN</div>
+        <div class="terminal-line"><span>✓</span> OSPF · EIGRP · BGP</div>
+        <div class="terminal-line"><span>✓</span> Cisco IOS · GNS3</div>
+        <div class="terminal-line"><b>status</b>: ready to learn and build_</div>
+        <div class="mini-stats">
+          <div class="stat"><strong>04</strong><small>Networking projects</small></div>
+          <div class="stat"><strong>CCNA</strong><small>Training</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading"><div class="kicker">01 / About</div><h2>Curious about how networks connect the world.</h2><p>A practical, learning-focused networking profile built around routing, switching, connectivity, and enterprise network reliability.</p></div>
+        <div class="about-grid">
+          <article class="card">
+            <h3>Profile</h3>
+            <p>CCNA-trained Network Engineer with internship experience at Tungabhadra Networks Pvt. Ltd. Familiar with Cisco routers and switches in real-device and GNS3 environments, along with network verification and troubleshooting.</p>
+            <div class="tag-list"><span class="tag">Problem solving</span><span class="tag">Teamwork</span><span class="tag">Time management</span></div>
+          </article>
+          <article class="card">
+            <h3>Education</h3>
+            <p><strong>B.Tech — Artificial Intelligence &amp; Machine Learning</strong><br>Mohan Babu University · 2023–2027</p>
+            <p style="margin-top:16px"><strong>Intermediate — MPC</strong><br>Sri Chaitanya Junior College · 2021–2023</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading"><div class="kicker">02 / Technical toolkit</div><h2>Skills &amp; technologies</h2><p>Core networking concepts and tools documented in my resume.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon">↔</div><h3>Routing</h3><p>Static and default routing, OSPF, EIGRP, BGP, route redistribution.</p></article>
+          <article class="skill-card"><div class="skill-icon">▦</div><h3>Switching</h3><p>VLANs, 802.1Q trunking, STP, EtherChannel, inter-VLAN routing and SVIs.</p></article>
+          <article class="skill-card"><div class="skill-icon">⌘</div><h3>Network fundamentals</h3><p>TCP/IP, OSI model, IPv4 addressing, subnetting, LAN and WAN.</p></article>
+          <article class="skill-card"><div class="skill-icon">⛨</div><h3>Network services &amp; security</h3><p>DHCP, DNS, NAT, PAT, ACLs and IPsec VPN fundamentals.</p></article>
+          <article class="skill-card"><div class="skill-icon">▤</div><h3>Cisco technologies</h3><p>Cisco IOS, Cisco 1900 routers and Catalyst 2960/3850 switches.</p></article>
+          <article class="skill-card"><div class="skill-icon">⌕</div><h3>Tools</h3><p>GNS3, Wireshark, Zabbix, ServiceNow and GLPI.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading"><div class="kicker">03 / Selected work</div><h2>Networking projects</h2><p>Enterprise-style configurations and validation completed in network lab environments.</p></div>
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-top"><div><div class="project-number">PROJECT / 01</div><h3>Enterprise BGP Adjacency Verification &amp; Route Exchange</h3></div></div>
+            <p>Configured eBGP and iBGP peerings across multiple autonomous systems in GNS3. Implemented Next-Hop Self and route advertisement, then troubleshot neighbor establishment, route propagation and next-hop reachability.</p>
+            <div class="tag-list"><span class="tag">BGP</span><span class="tag">GNS3</span><span class="tag">Route exchange</span><span class="tag">Troubleshooting</span></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><div><div class="project-number">PROJECT / 02</div><h3>Building Management System (BMS) Enterprise Network</h3></div></div>
+            <p>Designed a segmented BMS network using VLANs, 802.1Q trunking, inter-VLAN routing and SVIs. Configured access ports and management IPs, then verified connectivity and resolved VLAN and addressing issues.</p>
+            <div class="tag-list"><span class="tag">VLAN</span><span class="tag">Cisco IOS</span><span class="tag">SVI</span><span class="tag">LAN design</span></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><div><div class="project-number">PROJECT / 03</div><h3>OSPF–BGP Integration with Route Redistribution</h3></div></div>
+            <p>Configured OSPF and BGP across Cisco Layer 3 switching and router devices, using Area 0, Stub Area and NSSA. Implemented bidirectional route redistribution and checked route propagation, neighbor relationships and connectivity.</p>
+            <div class="tag-list"><span class="tag">OSPF</span><span class="tag">BGP</span><span class="tag">Redistribution</span><span class="tag">Cisco</span></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><div><div class="project-number">PROJECT / 04</div><h3>EIGRP Implementation with HSRP &amp; VRRP</h3></div></div>
+            <p>Configured EIGRP adjacencies and route exchange, then implemented HSRP and VRRP for gateway redundancy. Verified convergence, routing tables and failover behavior during link-failure scenarios.</p>
+            <div class="tag-list"><span class="tag">EIGRP</span><span class="tag">HSRP</span><span class="tag">VRRP</span><span class="tag">High availability</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading"><div class="kicker">04 / Experience &amp; credentials</div><h2>Learning through hands-on practice.</h2></div>
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Network Engineering Intern</h3>
+              <div class="meta">Tungabhadra Networks Pvt. Ltd.</div>
+              <p>Gained hands-on networking experience and practical exposure to Cisco routing and switching, network configuration, monitoring and troubleshooting.</p>
+            </div>
+            <div class="timeline-item">
+              <h3>CCNA Training</h3>
+              <div class="meta">Tungabhadra Networks Pvt. Ltd.</div>
+              <p>Training and certification listed in my resume, covering core routing, switching and networking concepts.</p>
+            </div>
+          </div>
+          <div class="tag-list"><span class="tag">English</span><span class="tag">Telugu</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div><div class="kicker">05 / Contact</div><h2>Let’s connect.</h2><p>Open to networking opportunities, internships, collaboration and continued learning.</p></div>
+          <div class="contact-links">
+            <a href="mailto:lushasree08@gmail.com">✉ lushasree08@gmail.com</a>
+            <a href="tel:+917569732979">☎ +91 75697 32979</a>
+            <span style="color:var(--muted)">⌖ Kurnool, Andhra Pradesh, India</span>
+            <button class="btn btn-secondary" onclick="navigator.clipboard.writeText('lushasree08@gmail.com').then(()=>{this.textContent='Email copied ✓'}).catch(()=>{window.location.href='mailto:lushasree08@gmail.com'})">Copy email address</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Lakkasani Ushasree</span><span>Designed with clarity, built for the next opportunity.</span></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
